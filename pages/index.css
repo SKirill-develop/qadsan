@@ -1,2 +1,130 @@
 @import "../vendor/normalize.css";
-@import "../vendor/fonts.css";/*# sourceMappingURL=index.css.map */
+@import "../vendor/fonts.css";
+.body {
+  font-family: "SFProDisplay";
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.about {
+  background-image: url(../../../../image/back-about.png);
+}
+.about__logo {
+  width: 97px;
+  height: 97px;
+  margin: 37px 0 0 0;
+}
+.about__conteiner {
+  display: flex;
+}
+.about__info {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  max-width: 670px;
+  margin-top: 174px;
+}
+.about__title {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 67px;
+  margin: 0;
+}
+.about__caption {
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 47px;
+  margin: 25px 0 260px 0;
+}
+
+.reg-form {
+  width: 380px;
+  height: 516px;
+  background-color: #fff;
+  box-shadow: 0px 32px 67px rgba(37, 41, 141, 0.08);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.reg-form__title {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 27px;
+  color: #232323;
+  margin: 52px 0 41px 0;
+}
+.reg-form__button {
+  width: 314px;
+  height: 48px;
+  margin-bottom: 23px;
+  border: none;
+}
+.reg-form__button_type_facebook {
+  background-image: url(../../../../image/facebook-Button.svg);
+}
+.reg-form__button_type_google {
+  background-image: url(../../../../image/google-Button.svg);
+}
+.reg-form__button_type_email {
+  background-image: url(../../../../image/email-Button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  border: 1px solid #747474;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+.reg-form__span {
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 27px;
+  color: #939393;
+  margin-bottom: 32px;
+}
+.reg-form__rules {
+  max-width: 237px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #747474;
+}
+.reg-form__link {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 18px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #284AFF;
+}
+
+.reg-form span {
+  position: relative;
+}
+
+.reg-form span:before {
+  display: block;
+  width: 200px;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #8F8F8F;
+  top: 50%;
+  right: 70px;
+}
+
+.reg-form span:after {
+  display: block;
+  width: 200px;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #8F8F8F;
+  top: 50%;
+  left: 70px;
+}/*# sourceMappingURL=index.css.map */
