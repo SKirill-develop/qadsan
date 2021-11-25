@@ -1,0 +1,43 @@
+.work {
+  &__title {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    color: #29083D;
+    margin: 75px 0 0;
+
+    &_span {
+      color: #6A2E8E;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    &_caption {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 27px;
+      color: #29083D;
+      margin-left: 25px;
+      max-width: 300px;
+    }
+  }
+  &__item:nth-child(2n) {
+    justify-content: center;
+  }
+  &__item:nth-child(3n) {
+    justify-content: end;
+  }
+  &__table{
+    margin-top: 130px;
+    margin-bottom: 168px;
+  }
+}
