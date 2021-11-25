@@ -1,0 +1,82 @@
+.reviews {
+  position: relative;
+  &__contein{
+    display: flex;
+    align-items: flex-end;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 66px;
+    color: #000000;
+    margin: 0;
+  }
+  &__woman {
+    z-index: -1;
+  }
+  &__info {
+    position: relative;
+  }
+  &__button {
+    background: linear-gradient(89.8deg, #8B1895 22.22%, #2840C0 110.59%);
+    border-radius: 0px 13px 13px 13px;
+    transform: rotate(-3.69deg);
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 66px;
+    color: #FFFFFF;
+    transform: rotate(-3.69deg);
+    border: none;
+    padding: 10px 28px;
+    min-width: 600px;
+  }
+  &__ellipse {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    z-index: -1;
+  }
+  &__wing {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+  }
+  &__wave {
+    position: absolute;
+    top: 55%;
+    z-index: -1;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+    position: relative;
+  }
+  &__autor {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 60px;
+    color: #232323;
+    margin: 50px 0 37px 0;
+  }
+  &__quote {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #4A4A4A;
+    max-width: 560px;
+    margin: 0;
+  }
+  &__marks {
+    position: absolute;
+    &_type_up{
+      top: 40%;
+      left: -5%;
+    }
+    &_type_bottom{
+      bottom: -5%;
+      right: -5%;
+    }
+  }
+}

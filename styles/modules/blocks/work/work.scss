@@ -30,12 +30,15 @@
       max-width: 300px;
     }
   }
+
   &__item:nth-child(2n) {
     justify-content: center;
   }
+
   &__item:nth-child(3n) {
     justify-content: end;
   }
+
   &__table{
     margin-top: 130px;
     margin-bottom: 168px;

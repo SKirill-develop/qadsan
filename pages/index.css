@@ -269,4 +269,87 @@
 .work__table {
   margin-top: 130px;
   margin-bottom: 168px;
+}
+
+.reviews {
+  position: relative;
+}
+.reviews__contein {
+  display: flex;
+  align-items: flex-end;
+}
+.reviews__title {
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 66px;
+  color: #000000;
+  margin: 0;
+}
+.reviews__woman {
+  z-index: -1;
+}
+.reviews__info {
+  position: relative;
+}
+.reviews__button {
+  background: linear-gradient(89.8deg, #8B1895 22.22%, #2840C0 110.59%);
+  border-radius: 0px 13px 13px 13px;
+  transform: rotate(-3.69deg);
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 66px;
+  color: #FFFFFF;
+  transform: rotate(-3.69deg);
+  border: none;
+  padding: 10px 28px;
+  min-width: 600px;
+}
+.reviews__ellipse {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  z-index: -1;
+}
+.reviews__wing {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+}
+.reviews__wave {
+  position: absolute;
+  top: 55%;
+  z-index: -1;
+}
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
+  position: relative;
+}
+.reviews__autor {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 60px;
+  color: #232323;
+  margin: 50px 0 37px 0;
+}
+.reviews__quote {
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #4A4A4A;
+  max-width: 560px;
+  margin: 0;
+}
+.reviews__marks {
+  position: absolute;
+}
+.reviews__marks_type_up {
+  top: 40%;
+  left: -5%;
+}
+.reviews__marks_type_bottom {
+  bottom: -5%;
+  right: -5%;
 }/*# sourceMappingURL=index.css.map */
