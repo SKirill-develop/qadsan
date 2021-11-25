@@ -1,0 +1,46 @@
+.advantages {
+  background-image: url(../../../../image/back-advantages.png);
+  background-repeat: no-repeat;
+  min-height: 780px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 76px;
+    max-width: 644px;
+    margin: 93px 0 70px 0;
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(457px, 1fr));
+    column-gap: 40px;
+    row-gap: 110px;
+    list-style-type: none;
+    margin-bottom: 93px;
+    padding: 0;
+  }
+
+  &__contein{
+    display: flex;
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 21px;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 39px;
+    max-width: 402px;
+  }
+
+  &__caption {
+
+  }
+
+}
