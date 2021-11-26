@@ -14,7 +14,10 @@ const Lapyap = new Chart(lapyapChart,config);
 
 var url = '../scripts/api.php?x=hello';
 
-fetch(url)
+let myObj = {1:2, 2:3}
+fetch(url, {
+method: "GET",
+})
 .then(function (response) {
   return response.json();
 })

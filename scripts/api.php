@@ -1,7 +1,16 @@
 <?php
-if(isset($_GET['x']))
-{
-    $get = 'Возврат';
-    echo $get;
+$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+if ($contentType === "application/json") {
+  //Receive the RAW post data.
+  $content = trim(file_get_contents("php://input"));
+
+  $decoded = json_decode($content, true);
+
+  if(! is_array($decoded)) {
+    echo 'good';
+  } else {
+    echo 'bad';// Send error back to user.
+  }
 }
 ?>
