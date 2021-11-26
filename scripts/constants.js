@@ -1,0 +1,10 @@
+export const alsetChart = document.querySelector('#alset');
+export const ellpaChart = document.querySelector('#ellpa');
+export const elgoogChart = document.querySelector('#elgoog');
+export const ekinChart = document.querySelector('#ekin');
+export const koobecafChart = document.querySelector('#koobecaf');
+export const ispepChart = document.querySelector('#ispep');
+export const margeletChart = document.querySelector('#margelet');
+export const asivChart = document.querySelector('#asiv');
+export const trosorcimChart = document.querySelector('#trosorcim');
+export const lapyapChart = document.querySelector('#lapyap');
