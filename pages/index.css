@@ -38,6 +38,7 @@ button {
 }
 .about {
   background-image: url(../image/back-about.png);
+  background-repeat: no-repeat;
 }
 .about__logo {
   width: 300px;
@@ -96,7 +97,7 @@ button {
 }
 .reg-form {
   width: 380px;
-  height: 300px;
+  height: 516px;
   background-color: #fff;
   box-shadow: 0px 32px 67px rgba(37, 41, 141, 0.08);
   border-radius: 8px;
@@ -637,5 +638,89 @@ button {
   .always__caption {
     font-size: 10px;
     line-height: 12px;
+  }
+}
+.trades {
+  display: flex;
+  max-height: calc(100vh - 300px);
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 300px;
+  padding: 1.8em 1.3em 1.3em;
+}
+
+.operations__list {
+  background: #fff;
+  margin: 10px;
+  padding: 10px 50px 10px 20px;
+  display: flex;
+  position: relative;
+  border: solid 1px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1.1;
+  word-break: break-all;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+  font-weight: 400;
+  width: 200px;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.operations__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.operations__list_img {
+  width: 24px;
+  height: 24px;
+}
+
+.operations__content {
+  margin: 0;
+}
+
+.from {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wallet_link {
+  text-decoration: none;
+}
+
+.popup__button__close {
+  position: relative;
+}
+
+.popup__close {
+  width: 10px;
+  position: absolute;
+  opacity: 0.2;
+  right: 0.8em;
+  top: 0.5em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.date {
+  margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .tades {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

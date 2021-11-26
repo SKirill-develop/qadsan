@@ -28,6 +28,17 @@
             <button
               class="reg-form__button reg-form__button_type_google"
             ></button>
+            <span class="reg-form__span">veya</span>
+            <button
+              class="reg-form__button reg-form__button_type_email"
+            ></button>
+            <p class="reg-form__rules">
+              Kayıt olarak <a href="#">Müşteri Sözleşmesi</a> şartlarını ve
+              <a href="#">Gizlilik politikasını</a> ve dünya finans
+              piyasalarındaki işlemlerle ilgili tüm riskleri kabul etmiş
+              sayılırsınız.
+            </p>
+            <a href="#" class="reg-form__link">Zaten hesabım var</a>
           </div>
         </div>
       </div>
@@ -294,12 +305,50 @@
             <button
               class="reg-form__button reg-form__button_type_google"
             ></button>
+            <span class="reg-form__span">veya</span>
+            <button
+              class="reg-form__button reg-form__button_type_email"
+            ></button>
+            <p class="reg-form__rules">
+              Kayıt olarak <a href="#">Müşteri Sözleşmesi</a> şartlarını ve
+              <a href="#">Gizlilik politikasını</a> ve dünya finans
+              piyasalarındaki işlemlerle ilgili tüm riskleri kabul etmiş
+              sayılırsınız.
+            </p>
+            <a href="#" class="reg-form__link">Zaten hesabım var</a>
           </div>
         </div>
       </div>
       <img src="./image/icons.png" alt="icons" class="always__icons">
     </section>
+    <div class="trades"></div>
+<template id="trades-List">
+					<div class="operations__list">
+                        <img class="popup__close" src="./image/close.svg">
+                        <div class="operations__img">
+                        <img class="operations__list_img" src="./image/checkbox.svg">
+                        </div>
+                        <div class="operations__text">
+                        <a class="wallet_link wallet_link_buy" target="_blank"><span class="wallet_buy"></span></a>
+                            bought
+                            <p class="operations__content">
+                            <span class="sell_amount"></span>
+                            <span class="asset_sell_code"></span>
+                            </p>
+                            from
+                            <a class="wallet_link wallet_link_sell" target="_blank"><span class="wallet_sell"></span></a>
+                            for
+                            <p class="operations__content">
+                            <span class="buy_amount"></span>
+                            <span class="asset_buy_code"></span>
+                            </p>
+							<p class="date"></p>
+						</div>
+					</div>
+</template>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/9.1.0/stellar-sdk.js"></script>
     <script type="module" src="./pages/index.js"></script>
   </body>
 </html>

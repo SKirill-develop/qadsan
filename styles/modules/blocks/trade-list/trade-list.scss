@@ -1,0 +1,111 @@
+.trades{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: calc(100vh - 300px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 300px;
+    padding: 1.8em 1.3em 1.3em;
+}
+
+.operations__list{
+    background: #fff;
+    margin: 10px;
+    padding: 10px 50px 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    border: solid 1px;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1.1;
+    word-break: break-all;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    opacity: 1;
+    font-weight: 400;
+    width: 200px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility .5s, opacity .5s linear;
+    -o-transition: visibility .5s, opacity .5s linear;
+    transition: visibility .5s, opacity .5s linear;
+}
+
+.operations__text{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.operations__list_img{
+    width: 24px;
+    height: 24px;
+}
+
+.operations__content{
+    margin: 0;
+}
+
+.from{
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+}
+
+.wallet_link{
+    text-decoration: none;
+}
+
+.popup__button__close{
+position: relative;
+}
+
+.popup__close{
+    width: 10px;
+    position: absolute;
+    opacity: .2;
+    right: .8em;
+    top: .5em;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.date{
+    margin: 0;
+}
+
+@media screen and (max-width: 750px){
+    .tades{
+        display: none;
+    }
+}

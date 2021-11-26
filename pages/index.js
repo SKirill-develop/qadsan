@@ -1,4 +1,5 @@
-import {config} from '../scripts/charts.js'
+import {config} from '../scripts/charts.js';
+import {check} from '../scripts/trades.js'
 import {alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js'
 
 const Alset = new Chart(alsetChart,config);
@@ -12,3 +13,4 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
+check();
