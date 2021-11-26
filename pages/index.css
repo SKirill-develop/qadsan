@@ -37,7 +37,7 @@ button {
   }
 }
 .about {
-  background-image: url(../../../image/back-about.png);
+  background-image: url(../image/back-about.png);
 }
 .about__logo {
   width: 97px;
@@ -121,13 +121,13 @@ button {
   background-position: center;
 }
 .reg-form__button_type_facebook {
-  background-image: url(../../../image/facebook-Button.svg);
+  background-image: url(../image/facebook-Button.svg);
 }
 .reg-form__button_type_google {
-  background-image: url(../../../image/google-Button.svg);
+  background-image: url(../image/google-Button.svg);
 }
 .reg-form__button_type_email {
-  background-image: url(../../../image/email-Button.svg);
+  background-image: url(../image/email-Button.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
@@ -218,7 +218,7 @@ button {
   }
 }
 .advantages {
-  background-image: url(../../../image/back-advantages.png);
+  background-image: url(../image/back-advantages.png);
   background-repeat: no-repeat;
   min-height: 780px;
   background-position: bottom;
