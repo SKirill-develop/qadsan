@@ -14,14 +14,6 @@ const data = {
     {
       label: 'Price $',
       data: [0.2,0.2,0.3,0.4,0.3,0.2,0.4],
-      options: {
-        scales: {
-            y: {
-              min: 0,
-              max: 1,
-            }
-        }
-      },
       backgroundColor: '#51C571',
       fill: true,
       tension: 0.4
@@ -32,4 +24,13 @@ const data = {
 export const config = {
   type: 'line',
   data: data,
+  options: {
+    scales: {
+        y: {
+          type: 'linear',
+          min: 0,
+          max: 1,
+        }
+    }
+  },
 };
