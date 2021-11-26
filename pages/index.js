@@ -12,14 +12,3 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
-const url = 'https://api.stellar.expert/explorer/public/asset/ALSET-GA4LXEHVL7WZOFL7KRQEZ36ASVNJFP6OHQRS6UQ36GFFGYS7ZZNAVBBJ';
-
-fetch(url)
-.then(function (response) {
-
-  console.log('response: ', response);
-})
-
-.catch(function (err) {
-  console.log(err);
-})
