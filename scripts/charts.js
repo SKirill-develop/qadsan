@@ -13,7 +13,15 @@ const data = {
   datasets: [
     {
       label: 'Price $',
-      data: [5,4,3,4,15,6,10],
+      data: [0.2,0.2,0.3,0.4,0.3,0.2,0.4],
+      options: {
+        scales: {
+            y: {
+              min: 0,
+              max: 1,
+            }
+        }
+      },
       backgroundColor: '#51C571',
       fill: true,
       tension: 0.4
