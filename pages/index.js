@@ -14,13 +14,12 @@ const Lapyap = new Chart(lapyapChart,config);
 
 const url = 'https://api.stellar.expert/explorer/public/asset/ALSET-GA4LXEHVL7WZOFL7KRQEZ36ASVNJFP6OHQRS6UQ36GFFGYS7ZZNAVBBJ';
 
-fetch(url,{credentials: 'include'})
+fetch(url)
 .then(function (response) {
-  return response.json();
+
+  console.log('response: ', response);
 })
-.then(function (body) {
-  console.log(body);
-})
+
 .catch(function (err) {
   console.log(err);
 })
