@@ -2,7 +2,7 @@
   position: relative;
   &__contein {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   }
   &__title {
     font-weight: bold;
@@ -13,6 +13,7 @@
   }
   &__woman {
     z-index: -1;
+    width: 40%;
   }
   &__info {
     position: relative;
@@ -58,6 +59,7 @@
     flex-direction: column;
     align-items: center;
     margin-left: 80px;
+    margin-right: 20px;
     position: relative;
   }
   &__autor {
@@ -82,22 +84,102 @@
       left: -5%;
     }
     &_type_bottom {
-      bottom: -5%;
-      right: -5%;
+      bottom: 0;
+      right: 0;
     }
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1235px) {
   .reviews {
-    &__contein {
-      flex-direction: column;
-      align-items: center;
+    &__title {
+      font-size: 52px;
+      line-height: 56px;
     }
-    &__ellipse {
-      top: 37%;
-      left: 0;
+    &__button {
+      font-size: 34px;
+      line-height: 40px;
+      min-width: 400px;
+    }
+    &__wing {
+      top: 15%;
+      left: 50%;
+    }
+    &__also_wave {
+      top: 120%;
     }
   }
+}
 
+@media screen and (max-width: 768px) {
+  .reviews {
+    &__ellipse {
+      width: 50%;
+    }
+
+    &__quote {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &__wing {
+      top: 25%;
+      left: 40%;
+      width: 50px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 25px;
+    }
+
+    &__button {
+      font-size: 17px;
+      line-height: 17px;
+      min-width: 167px;
+    }
+
+    &__autor {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 20px 0 11px 0;
+    }
+
+    &__marks {
+      &_type_up {
+        top: 23%;
+        left: -7%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .reviews {
+
+    &__text {
+      margin-left: 0;
+    }
+
+    &__button {
+      padding: 10px 8px;
+    }
+    &__wing {
+      top: 20%;
+      left: 50%;
+    }
+
+    &__marks {
+
+      &_type_up {
+        left: 0;
+      }
+
+      &_type_bottom {
+        bottom: 0;
+        right: 0;
+      }
+
+    }
+  }
 }

@@ -9,6 +9,7 @@
 
   &__conteiner {
     display: flex;
+    padding-bottom: 260px;
   }
 
   &__info{
@@ -30,7 +31,7 @@
     font-weight: 500;
     font-size: 39px;
     line-height: 47px;
-    margin: 25px 0 260px 0;
+    margin: 25px 0 0;
   }
 }
 
@@ -39,6 +40,32 @@
   .about{
     &__info{
       max-width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about{
+    &__conteiner{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info{
+      margin-top: 74px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .about {
+    &__title {
+      font-size: 29px;
+      line-height: 30px;
+    }
+    &__caption {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 }

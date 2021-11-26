@@ -9,13 +9,13 @@
     &__list{
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      justify-items: center;
       gap: 40px;
       list-style: none;
       padding: 0;
     }
 
     &__item {
-      max-width: 300px;
       list-style: none;
       padding: 25px;
     }
@@ -42,4 +42,27 @@
       line-height: 29px;
       color: #FFFFFF;
     }
+    &__button:hover {
+      transform: scale(.9);
+    }
+}
+
+@media screen and (max-width: 660px) {
+  .charts {
+    &__button {
+      padding: 10px 97px;
+    }
+    &__title {
+      font-size: 25px;
+      line-height: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .charts {
+    &__button {
+      padding: 10px 70px;
+    }
+  }
 }

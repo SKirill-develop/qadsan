@@ -1,10 +1,11 @@
-.reg-form{
-  width:380px;
+.reg-form {
+  width: 380px;
   height: 516px;
   background-color: #fff;
   box-shadow: 0px 32px 67px rgba(37, 41, 141, 0.08);
   border-radius: 8px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -17,21 +18,22 @@
     color: #232323;
     margin: 52px 0 41px 0;
   }
-  &__button{
+  &__button {
     width: 314px;
     height: 48px;
     margin-bottom: 23px;
     border: none;
+    background-position: center;
 
-    &_type_facebook{
+    &_type_facebook {
       background-image: url(../../../../image/facebook-Button.svg);
     }
 
-    &_type_google{
+    &_type_google {
       background-image: url(../../../../image/google-Button.svg);
     }
 
-    &_type_email{
+    &_type_email {
       background-image: url(../../../../image/email-Button.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -64,20 +66,20 @@
     font-size: 21px;
     line-height: 18px;
     text-decoration-line: underline;
-    color: #284AFF;
+    color: #284aff;
   }
 }
 
-.reg-form  span {
+.reg-form span {
   position: relative;
 }
 
 .reg-form span:before {
   display: block;
   width: 200px;
-  content: '';
+  content: "";
   position: absolute;
-  border-bottom: 1px solid #8F8F8F;
+  border-bottom: 1px solid #8f8f8f;
   top: 50%;
   right: 70px;
 }
@@ -85,9 +87,45 @@
 .reg-form span:after {
   display: block;
   width: 200px;
-  content: '';
+  content: "";
   position: absolute;
-  border-bottom: 1px solid #8F8F8F;
+  border-bottom: 1px solid #8f8f8f;
   top: 50%;
   left: 70px;
+}
+
+@media screen and (max-width: 660px) {
+  .reg-form {
+    width: 350px;
+    height: 408px;
+
+    &__title {
+      font-size: 17px;
+      line-height: 31px;
+      margin: 10px;
+    }
+    &__span {
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    &__rules {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__button {
+      width: 229px;
+      height: 39px;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .reg-form {
+    width: 300px;
+    height: 408px;
+  }
 }
