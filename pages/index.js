@@ -11,3 +11,13 @@ const Margelet = new Chart(margeletChart,config);
 const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
+
+var url = '../scripts/api.php?x=hello';
+
+fetch(url)
+.then(function (response) {
+  return response.json();
+})
+.then(function (body) {
+  console.log(body);
+});
