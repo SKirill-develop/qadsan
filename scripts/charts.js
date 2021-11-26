@@ -1,6 +1,5 @@
 const date = new Date();
 const day = date.getDate();
-const month = date.getMonth()+1;
 const week = [day-6,day-5,day-4,day-3,day-2,day-1,day];
 
 const data = {
