@@ -1,16 +1,7 @@
 <?php
-$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-
-if ($contentType === "application/json") {
-  //Receive the RAW post data.
-  $content = trim(file_get_contents("php://input"));
-
-  $decoded = json_decode($content, true);
-
-  if(! is_array($decoded)) {
-    echo 'good';
-  } else {
-    echo 'bad';// Send error back to user.
-  }
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+  $input = file_get_contents('php://input');
+  $input = json_decode($input);
+  echo '23123';
 }
 ?>

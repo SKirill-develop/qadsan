@@ -12,15 +12,15 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
-var url = './scripts/api.php?x=hello';
+const url = 'https://api.stellar.expert/explorer/public/asset/ALSET-GA4LXEHVL7WZOFL7KRQEZ36ASVNJFP6OHQRS6UQ36GFFGYS7ZZNAVBBJ';
 
-let myObj = {1:2, 2:3}
-fetch(url, {
-method: "GET",
-})
+fetch(url,{credentials: 'include'})
 .then(function (response) {
   return response.json();
 })
 .then(function (body) {
   console.log(body);
-});
+})
+.catch(function (err) {
+  console.log(err);
+})
