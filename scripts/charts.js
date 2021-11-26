@@ -1,9 +1,15 @@
-const date = new Date();
-const day = date.getDate();
-const week = [day-6,day-5,day-4,day-3,day-2,day-1,day];
+let now = new Date();
+let time = now.getTime();
+now = new Date(time - (time % 86400000));
+let arr = [];
+let lastWeek = [];
+for (let i = 0; i < 7; i++, now.setDate(now.getDate() - 1)) {
+  arr.push(new Date(now.getTime()));
+  lastWeek.push(now.getDate() + '.' + (now.getMonth() + 1));
+}
 
 const data = {
-  labels: week,
+  labels: lastWeek.reverse(),
   datasets: [
     {
       label: 'Price $',
