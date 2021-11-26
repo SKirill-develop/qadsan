@@ -1,4 +1,4 @@
-import {server, trades, XLM, QADSAN} from './constants.js';
+import {server, trades, XLM, QADSAN, AllAssets} from './constants.js';
 
 const tradesList = (resp) => {
     console.log('resp: ', resp);
@@ -48,15 +48,13 @@ const tradesOnline = (AssetSell, AssetBuy) => {
 }
 
 // Все с XLM
-export const check = async () =>  {
+export const checkTrade = () =>  {
 tradesOnline(QADSAN, XLM);
 tradesOnline(XLM, QADSAN);
 
-//AllAssets.forEach ((asset) => {TradesOnline(asset, XLM)});
-//AllAssets.forEach ((asset) => {TradesOnline(XLM, asset);});
+//await AllAssets.forEach ((asset) => {tradesOnline(asset, QADSAN)});
+//AllAssets.forEach ((asset) => {TradesOnline(QADSAN, asset);});
 //Все с QADSAN
-// TradesOnline(QADSAN, STABLECENT);
-// TradesOnline(STABLECENT, QADSAN);
 // TradesOnline(QADSAN, ELGOOG);
 // TradesOnline(ELGOOG, QADSAN);
 // TradesOnline(QADSAN, ASIV);
