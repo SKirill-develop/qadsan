@@ -40,8 +40,8 @@ button {
   background-image: url(../image/back-about.png);
 }
 .about__logo {
-  width: 97px;
-  height: 97px;
+  width: 300px;
+  height: 100px;
   margin: 37px 0 0 0;
 }
 .about__conteiner {
