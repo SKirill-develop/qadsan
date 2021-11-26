@@ -12,7 +12,7 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
-var url = '../scripts/api.php?x=hello';
+var url = './scripts/api.php?x=hello';
 
 let myObj = {1:2, 2:3}
 fetch(url, {
