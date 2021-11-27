@@ -1,8 +1,10 @@
 import {config} from '../scripts/charts.js';
 import {trustAsset} from '../scripts/openTrusts.js';
-import {checkTrade} from '../scripts/trades.js'
-import {alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js'
-//checkTrade();
+import {checkTrade} from '../scripts/trades.js';
+import {alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js';
+
+checkTrade();
+
 const Alset = new Chart(alsetChart,config);
 const Ellpa = new Chart(ellpaChart,config);
 const Elgoog = new Chart(elgoogChart,config);
