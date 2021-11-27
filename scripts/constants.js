@@ -1,3 +1,5 @@
+export const trades = document.querySelector('.trades');
+
 export const alsetChart = document.querySelector('#alset');
 export const ellpaChart = document.querySelector('#ellpa');
 export const elgoogChart = document.querySelector('#elgoog');
@@ -8,10 +10,8 @@ export const margeletChart = document.querySelector('#margelet');
 export const asivChart = document.querySelector('#asiv');
 export const trosorcimChart = document.querySelector('#trosorcim');
 export const lapyapChart = document.querySelector('#lapyap');
-export const DeleteButton = document.querySelector(".popup__close");
 
 export const server = new StellarSdk.Server("https://horizon.stellar.lobstr.co");
-export const trades = document.querySelector('.trades');
 export const XLM = new StellarSdk.Asset.native();
 export const QADSAN = new StellarSdk.Asset('QADSAN', 'GAOLE7JSN4OB7344UCOOEGIHEQY2XNLCW6YHKOCGZLTDV4VRTXQM27QU');
 export const ELGOOG = new StellarSdk.Asset('ELGOOG', 'GBVKFKU77FCA75TQ6EYAUKIZG4NJL5NTMU3I3YJJI3MQUMG2GLH44EM4');
@@ -26,3 +26,4 @@ export const ALSET = new StellarSdk.Asset('ALSET', 'GA4LXEHVL7WZOFL7KRQEZ36ASVNJ
 export const MARGELET = new StellarSdk.Asset('MARGELET', 'GA5PB5WXXE4GTJWCDOPJPACFO7KC5IIIOO356XUCP37JPRDHJ2DL4AFI');
 export const NOZAMA = new StellarSdk.Asset('NOZAMA', 'GDVA6YXBBNA7ONRYIWQDVSZC366EU5HQIBKPY4PNM4QBVSDJCKYMF2EE');
 export const AllAssets = [QADSAN, MARGELET, NOZAMA, ELGOOG, ASIV, LAPYAP, EKIN, EKOOBECAF, TFOSORCIM, ELPPA, ISPEP, ALSET];
+export const AllAssetsForTrade = [MARGELET, NOZAMA, ELGOOG, ASIV, LAPYAP, EKIN, EKOOBECAF, TFOSORCIM, ELPPA, ISPEP, ALSET];

@@ -1,8 +1,6 @@
-import { server, trades, XLM, QADSAN, AllAssets } from "./constants.js";
-const deleteButton = document.querySelector(".popup__close");
-const blocks = document.querySelectorAll(".operations__list");
+import { server, trades, XLM, QADSAN, AllAssetsForTrade } from "./constants.js";
 
-const tradesList = (resp) => {
+const tradesList = resp => {
   console.log("resp: ", resp);
   if (resp.counter_asset_type === "native") {
     resp.counter_asset_code = "XLM";
@@ -33,15 +31,20 @@ const tradesList = (resp) => {
   operatElement.querySelector(".asset_sell_code").textContent =
     resp.counter_asset_code;
 
-  trades.prepend(OperatElement);
+  trades.prepend(operatElement);
+
+  const deleteButton = document.querySelectorAll(".popup__close");
+  const blocks = document.querySelectorAll(".operations__list");
 
   if (blocks.length > 5) {
     trades.lastElementChild.remove();
   }
 
-  deleteButton.addEventListener("click", function (evt) {
-    blocks.forEach(item => item.remove());
-  });
+  deleteButton.forEach((item) => {
+    item.addEventListener("click", function () {
+      blocks.forEach(item => item.remove());
+    })
+  })
 };
 
 const tradesOnline = (AssetSell, AssetBuy) => {
@@ -59,10 +62,10 @@ const tradesOnline = (AssetSell, AssetBuy) => {
 export const checkTrade = () => {
   tradesOnline(QADSAN, XLM);
   tradesOnline(XLM, QADSAN);
-  AllAssets.forEach((asset) => {
+  AllAssetsForTrade.forEach((asset) => {
     tradesOnline(asset, QADSAN);
   });
-  AllAssets.forEach((asset) => {
+  AllAssetsForTrade.forEach((asset) => {
     tradesOnline(QADSAN, asset);
   });
 };

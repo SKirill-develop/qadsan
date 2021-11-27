@@ -1,4 +1,4 @@
-import { server, AllAssets } from "./constants.js";
+import { server, AllAssets} from "./constants.js";
 
 const retrievePublicKey = async () => {
   let publicKey = "";

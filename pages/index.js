@@ -17,5 +17,5 @@ const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
 document.querySelector('.charts__button').addEventListener("click", function () {
-  trustAsset()
+  trustAsset();
 });
