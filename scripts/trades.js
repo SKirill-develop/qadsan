@@ -10,7 +10,7 @@ const tradesList = (resp) => {
   }
   const baseAmount = Number(resp.base_amount);
   const counterAmount = Number(resp.counter_amount);
-  let OperatElement = document
+  const OperatElement = document
     .querySelector("#trades-List")
     .content.cloneNode(true);
   OperatElement.querySelector(".wallet_buy").textContent =
