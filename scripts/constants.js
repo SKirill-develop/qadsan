@@ -9,7 +9,7 @@ export const asivChart = document.querySelector('#asiv');
 export const trosorcimChart = document.querySelector('#trosorcim');
 export const lapyapChart = document.querySelector('#lapyap');
 
-export const server = new StellarSdk.Server("https://horizon.stellar.org");
+export const server = new StellarSdk.Server("https://horizon.stellar.lobstr.co");
 export const trades = document.querySelector('.trades');
 export const XLM = new StellarSdk.Asset.native();
 export const QADSAN = new StellarSdk.Asset('QADSAN', 'GAOLE7JSN4OB7344UCOOEGIHEQY2XNLCW6YHKOCGZLTDV4VRTXQM27QU');
