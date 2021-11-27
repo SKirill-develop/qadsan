@@ -8,6 +8,7 @@ export const margeletChart = document.querySelector('#margelet');
 export const asivChart = document.querySelector('#asiv');
 export const trosorcimChart = document.querySelector('#trosorcim');
 export const lapyapChart = document.querySelector('#lapyap');
+export const DeleteButton = document.querySelector(".popup__close");
 
 export const server = new StellarSdk.Server("https://horizon.stellar.lobstr.co");
 export const trades = document.querySelector('.trades');

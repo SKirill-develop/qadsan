@@ -14,35 +14,26 @@ const retrievePublicKey = async () => {
   return publicKey;
 };
 
-//const retrievedPublicKey = retrievePublicKey();
-
 const userSignTransaction = async (xdr) => {
   let signedTransaction = "";
   let error = "";
-
   try {
     signedTransaction = await window.freighterApi.signTransaction(xdr);
   } catch (e) {
     error = e;
   }
-
   if (error) {
     return error;
   }
-
   return signedTransaction;
 };
 
 export const trustAsset = async () => {
   const publicKey = await retrievePublicKey()
-  //load the new account to create trustline
   server.loadAccount(publicKey)
       .then(async account => {
-          // create transaction builder
           const fee = 300
           const builder = new StellarSdk.TransactionBuilder(account, { fee, networkPassphrase: StellarSdk.Networks.PUBLIC });
-
-          // Change Trustline to trust the asset to be used on the platform.
           AllAssets.forEach((asset) => {
             builder.addOperation(
               StellarSdk.Operation.changeTrust({
