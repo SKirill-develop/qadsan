@@ -1,7 +1,7 @@
 import {config} from '../scripts/charts.js';
 import {trustAsset} from '../scripts/openTrusts.js';
 import {checkTrade} from '../scripts/trades.js';
-import {DeleteButton, alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js';
+import {alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js';
 
 checkTrade();
 
@@ -15,10 +15,6 @@ const Margelet = new Chart(margeletChart,config);
 const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
-
-DeleteButton.addEventListener("click", function (evt) {
-  evt.target.parentElement.remove();
-});
 
 document.querySelector('.charts__button').addEventListener("click", function () {
   trustAsset()

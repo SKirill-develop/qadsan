@@ -1,4 +1,6 @@
 import { server, trades, XLM, QADSAN, AllAssets } from "./constants.js";
+const deleteButton = document.querySelector(".popup__close");
+const blocks = document.querySelectorAll(".operations__list");
 
 const tradesList = (resp) => {
   console.log("resp: ", resp);
@@ -10,34 +12,35 @@ const tradesList = (resp) => {
   }
   const baseAmount = Number(resp.base_amount);
   const counterAmount = Number(resp.counter_amount);
-  const OperatElement = document
+  const operatElement = document
     .querySelector("#trades-List")
     .content.cloneNode(true);
-  OperatElement.querySelector(".wallet_buy").textContent =
+  operatElement.querySelector(".wallet_buy").textContent =
     resp.base_account.slice(0, 5) + "..." + resp.base_account.slice(-5);
-  OperatElement.querySelector(".wallet_sell").textContent =
+  operatElement.querySelector(".wallet_sell").textContent =
     resp.counter_account.slice(0, 5) + "..." + resp.counter_account.slice(-5);
-  OperatElement.querySelector(".buy_amount").textContent =
+  operatElement.querySelector(".buy_amount").textContent =
     baseAmount.toFixed(5);
-  OperatElement.querySelector(".wallet_link_buy").href =
+  operatElement.querySelector(".wallet_link_buy").href =
     "https://stellar.expert/explorer/public/account/" + resp.base_account;
-  OperatElement.querySelector(".wallet_link_sell").href =
+  operatElement.querySelector(".wallet_link_sell").href =
     "https://stellar.expert/explorer/public/account/" + resp.counter_account;
-  OperatElement.querySelector(".sell_amount").textContent =
+  operatElement.querySelector(".sell_amount").textContent =
     counterAmount.toFixed(5);
-  OperatElement.querySelector(".date").textContent = resp.ledger_close_time;
-  OperatElement.querySelector(".asset_buy_code").textContent =
+  operatElement.querySelector(".date").textContent = resp.ledger_close_time;
+  operatElement.querySelector(".asset_buy_code").textContent =
     resp.base_asset_code;
-  OperatElement.querySelector(".asset_sell_code").textContent =
+  operatElement.querySelector(".asset_sell_code").textContent =
     resp.counter_asset_code;
+
   trades.prepend(OperatElement);
-  let CountBLocks = document.querySelectorAll(".operations__list");
-  if (CountBLocks.length > 5) {
+
+  if (blocks.length > 5) {
     trades.lastElementChild.remove();
   }
-  const DeleteButton = document.querySelector(".popup__close");
-  DeleteButton.addEventListener("click", function (evt) {
-    evt.target.parentElement.remove();
+
+  deleteButton.addEventListener("click", function (evt) {
+    blocks.forEach(item => item.remove());
   });
 };
 
