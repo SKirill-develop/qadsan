@@ -16,6 +16,6 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
-document.querySelector('.charts__button').addEventListener("click", function () {
+document.querySelector('.open-trust__freighter').addEventListener("click", function () {
   trustAsset();
 });

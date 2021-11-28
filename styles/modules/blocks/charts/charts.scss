@@ -43,8 +43,41 @@
       color: #FFFFFF;
     }
     &__button:hover {
-      transform: scale(.9);
+      transform: scale(.95);
     }
+    &__buttons {
+      display: flex;
+      justify-content: space-around;
+        &__title {
+          font-size: 23px;
+          line-height: 27px;
+          color: #29083D;
+          margin: 0;
+          text-align: center;
+        }
+    }
+}
+.open-trust{
+  width: 300px;
+  height: 50px;
+    &__albedo {
+      background: url('../../../../image/albedo-logo.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 10px;
+    }
+    &__freighter {
+      background: url('../../../../image/freighter-logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 10px;
+    }
+}
+
+.open-trust:hover {
+  transform: scale(.95);
 }
 
 @media screen and (max-width: 660px) {
