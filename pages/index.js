@@ -1,7 +1,8 @@
 import {config} from '../scripts/charts.js';
 import {trustAsset} from '../scripts/openTrusts.js';
 import {checkTrade} from '../scripts/trades.js';
-import {alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js';
+import {popup, openTrustsFromFreighter, alsetChart, ellpaChart, elgoogChart, ekinChart, koobecafChart, ispepChart, margeletChart, asivChart, trosorcimChart, lapyapChart} from '../scripts/constants.js';
+import { closePopup } from "../scripts/utils.js";
 
 checkTrade();
 
@@ -16,6 +17,16 @@ const Asiv = new Chart(asivChart,config);
 const Trosorcim = new Chart(trosorcimChart,config);
 const Lapyap = new Chart(lapyapChart,config);
 
-document.querySelector('.open-trust__freighter').addEventListener("click", function () {
+openTrustsFromFreighter.addEventListener("click", function () {
+  openTrustsFromFreighter.disabled = true;
   trustAsset();
+});
+
+popup.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("active")) {
+    closePopup(popup);
+  }
+  if (evt.target.classList.contains("close")) {
+    closePopup(popup);
+  }
 });

@@ -1,4 +1,5 @@
-import { server, AllAssets} from "./constants.js";
+import { server, AllAssets, openTrustsFromFreighter, popup } from "./constants.js";
+import { openpPopup } from "./utils.js";
 
 const retrievePublicKey = async () => {
   let publicKey = "";
@@ -47,13 +48,14 @@ export const trustAsset = async () => {
               userSignedTransaction,
               StellarSdk.Networks.PUBLIC
           );
-          console.log(transactionToSubmit)
           try {
               const response = await server.submitTransaction(transactionToSubmit);
               console.log(response);
+              openpPopup(popup);
           } catch (err) {
               console.error(err);
           }
       })
+      openTrustsFromFreighter.disabled = false;
 }
 

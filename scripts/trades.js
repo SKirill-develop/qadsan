@@ -60,12 +60,8 @@ const tradesOnline = (AssetSell, AssetBuy) => {
 };
 
 export const checkTrade = () => {
-  tradesOnline(QADSAN, XLM);
   tradesOnline(XLM, QADSAN);
   AllAssetsForTrade.forEach((asset) => {
     tradesOnline(asset, QADSAN);
-  });
-  AllAssetsForTrade.forEach((asset) => {
-    tradesOnline(QADSAN, asset);
   });
 };
