@@ -89,6 +89,10 @@
       font-size: 25px;
       line-height: 29px;
     }
+    &__buttons {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
