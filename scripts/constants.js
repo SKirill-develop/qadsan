@@ -1,6 +1,8 @@
 export const trades = document.querySelector('.trades');
 export const openTrustsFromFreighter = document.querySelector('.open-trust__freighter');
 export const popup = document.querySelector('#popup');
+export const popupTite = popup.querySelector('.popup__title');
+export const popupResult= popup.querySelector('.popup__result');
 
 export const alsetChart = document.querySelector('#alset');
 export const ellpaChart = document.querySelector('#ellpa');

@@ -1,7 +1,8 @@
-import {popup} from './constants.js';
-
-export const openpPopup = popup => {
-  popup.classList.add("active");
+export const openpPopup = config => {
+  config.popup.classList.add("active");
+  config.title.textContent = 'Success!'
+  config.result.textContent = config.hash;
+  config.result.href = 'https://stellar.expert/explorer/public/tx/' + config.hash;
 }
 
 export const closePopup = popup => {

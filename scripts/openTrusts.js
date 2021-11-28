@@ -1,4 +1,4 @@
-import { server, AllAssets, openTrustsFromFreighter, popup } from "./constants.js";
+import { server, AllAssets, openTrustsFromFreighter, popup, popupTite, popupResult } from "./constants.js";
 import { openpPopup } from "./utils.js";
 
 const retrievePublicKey = async () => {
@@ -41,7 +41,7 @@ export const trustAsset = async () => {
                   asset: asset
               }))
           })
-          let transaction = builder.setTimeout(180).build();
+          let transaction = builder.addMemo(StellarSdk.Memo.text("QADSAN GAME OPEN")).setTimeout(180).build();
           let xdr = transaction.toXDR()
           const userSignedTransaction = await userSignTransaction(xdr);
           const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
@@ -51,7 +51,12 @@ export const trustAsset = async () => {
           try {
               const response = await server.submitTransaction(transactionToSubmit);
               console.log(response);
-              openpPopup(popup);
+              openpPopup({
+                popup: popup,
+                title: popupTite,
+                result: popupResult,
+                hash: response.hash,
+              });
           } catch (err) {
               console.error(err);
           }
