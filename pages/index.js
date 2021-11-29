@@ -18,6 +18,7 @@ import {
   lapyapChart,
   deleteButton,
   trades,
+  loader,
 } from "../scripts/constants.js";
 import { closePopup } from "../scripts/utils.js";
 
@@ -36,11 +37,13 @@ const Lapyap = new Chart(lapyapChart, config);
 
 openTrustsFromFreighter.addEventListener("click", function () {
   openTrustsFromFreighter.disabled = true;
+  loader.classList.remove('not-active');
   trustAsset();
 });
 
 openTrustsFromAlbedo.addEventListener("click", function () {
   openTrustsFromAlbedo.disabled = true;
+  loader.classList.remove('not-active');
   openTrustAlbedo();
 });
 

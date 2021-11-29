@@ -1,4 +1,4 @@
-import { server, trades, XLM, QADSAN, AllAssetsForTrade, tradesContent } from "./constants.js";
+import { server, trades, XLM, QADSAN, AllAssetsForTrade } from "./constants.js";
 
 const tradesList = (resp) => {
   console.log("resp: ", resp);

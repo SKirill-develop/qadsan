@@ -1,17 +1,19 @@
 import {
   server,
   AllAssets,
-  openTrustsFromFreighter,
+  openTrustsFromAlbedo,
   popup,
   popupTite,
   popupResult,
+  loader,
 } from "./constants.js";
 import { openpPopup } from "./utils.js";
 
-export const openTrustAlbedo= async () => {
- const publicKey = await albedo.publicKey()
-  .then(res => res.pubkey)
-  .catch(e => console.error(e))
+export const openTrustAlbedo = async () => {
+  const publicKey = await albedo
+    .publicKey()
+    .then((res) => res.pubkey)
+    .catch((err) => console.error(err));
   server.loadAccount(publicKey).then(async (account) => {
     const optionalFee = await server.feeStats();
     const avgFee = optionalFee.fee_charged.mode;
@@ -32,12 +34,13 @@ export const openTrustAlbedo= async () => {
       .setTimeout(180)
       .build();
     let xdr = transaction.toXDR();
-    const userSignedTransaction =  albedo.tx({
-                                      xdr: xdr,
-                                      network: 'public'
-                                        })
-                                      .then(res => res.result)
-                                      .catch(e => console.error(e))
+    const userSignedTransaction = albedo
+      .tx({
+        xdr: xdr,
+        network: "public",
+      })
+      .then((res) => res.result)
+      .catch((e) => console.error(e));
 
     const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
       userSignedTransaction,
@@ -46,6 +49,7 @@ export const openTrustAlbedo= async () => {
     try {
       const response = await server.submitTransaction(transactionToSubmit);
       console.log(response);
+      loader.classList.add('not-active');
       openpPopup({
         popup: popup,
         title: popupTite,
@@ -56,5 +60,5 @@ export const openTrustAlbedo= async () => {
       console.error(err);
     }
   });
-  openTrustsFromFreighter.disabled = false;
-}
+  openTrustsFromAlbedo.disabled = false;
+};

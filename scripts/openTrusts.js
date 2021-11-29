@@ -5,6 +5,7 @@ import {
   popup,
   popupTite,
   popupResult,
+  loader,
 } from "./constants.js";
 import { openpPopup } from "./utils.js";
 
@@ -66,6 +67,7 @@ export const trustAsset = async () => {
     try {
       const response = await server.submitTransaction(transactionToSubmit);
       console.log(response);
+      loader.classList.add('not-active');
       openpPopup({
         popup: popup,
         title: popupTite,
@@ -76,5 +78,6 @@ export const trustAsset = async () => {
       console.error(err);
     }
   });
+
   openTrustsFromFreighter.disabled = false;
 };

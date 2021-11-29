@@ -739,10 +739,6 @@ button {
   cursor: pointer;
 }
 
-.not-active {
-  display: none;
-}
-
 .date {
   margin: 0;
 }
@@ -814,4 +810,22 @@ button {
   .popup {
     width: 70%;
   }
+}
+.loader {
+  position: fixed;
+  background: #f1f2f3;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.not-active {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
