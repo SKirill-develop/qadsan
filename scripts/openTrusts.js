@@ -15,6 +15,7 @@ const retrievePublicKey = async () => {
   try {
     publicKey = await window.freighterApi.getPublicKey();
   } catch (e) {
+    loader.classList.add('not-active');
     error = e;
   }
   if (error) {

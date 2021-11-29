@@ -34,7 +34,7 @@ const tradesList = (resp) => {
   const blocks = document.querySelectorAll(".operations__list");
 
   if (blocks.length > 5) {
-    trades.lastElementChild.remove();
+    trades.firstElementChild.remove();
   }
 };
 
