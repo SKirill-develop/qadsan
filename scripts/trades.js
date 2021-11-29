@@ -24,7 +24,7 @@ const tradesList = (resp) => {
   operatElement.querySelector(".operations__price").textContent =
   (counterAmount/baseAmount).toFixed(5);
   if(trades.classList.contains('not-active')){
-    trades.classList.remove("not-active");
+    trades.classList.remove('not-active');
   }
   trades.prepend(operatElement);
 
