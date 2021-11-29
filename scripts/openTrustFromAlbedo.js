@@ -11,6 +11,7 @@ import { openpPopup } from "./utils.js";
 export const openTrustAlbedo= async () => {
  const publicKey = await albedo.publicKey()
   .then(res => res.pubkey)
+  .catch(e => console.error(e))
   server.loadAccount(publicKey).then(async (account) => {
     const optionalFee = await server.feeStats();
     const avgFee = optionalFee.fee_charged.mode;
@@ -36,6 +37,7 @@ export const openTrustAlbedo= async () => {
                                       network: 'public'
                                         })
                                       .then(res => res.result)
+                                      .catch(e => console.error(e))
 
     const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
       userSignedTransaction,
