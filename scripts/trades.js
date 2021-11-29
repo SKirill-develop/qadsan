@@ -1,6 +1,6 @@
 import { server, trades, XLM, QADSAN, AllAssetsForTrade } from "./constants.js";
 
-const tradesList = resp => {
+const tradesList = (resp) => {
   console.log("resp: ", resp);
   if (resp.counter_asset_type === "native") {
     resp.counter_asset_code = "XLM";
@@ -42,9 +42,9 @@ const tradesList = resp => {
 
   deleteButton.forEach((item) => {
     item.addEventListener("click", function () {
-      blocks.forEach(item => item.remove());
-    })
-  })
+      blocks.forEach((item) => item.remove());
+    });
+  });
 };
 
 const tradesOnline = (AssetSell, AssetBuy) => {

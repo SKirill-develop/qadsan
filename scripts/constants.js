@@ -1,5 +1,6 @@
 export const trades = document.querySelector('.trades');
 export const openTrustsFromFreighter = document.querySelector('.open-trust__freighter');
+export const openTrustsFromAlbedo = document.querySelector('.open-trust__albedo');
 export const popup = document.querySelector('#popup');
 export const popupTite = popup.querySelector('.popup__title');
 export const popupResult= popup.querySelector('.popup__result');

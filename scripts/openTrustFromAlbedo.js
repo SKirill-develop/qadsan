@@ -8,36 +8,9 @@ import {
 } from "./constants.js";
 import { openpPopup } from "./utils.js";
 
-const retrievePublicKey = async () => {
-  let publicKey = "";
-  let error = "";
-  try {
-    publicKey = await window.freighterApi.getPublicKey();
-  } catch (e) {
-    error = e;
-  }
-  if (error) {
-    return error;
-  }
-  return publicKey;
-};
-
-const userSignTransaction = async (xdr) => {
-  let signedTransaction = "";
-  let error = "";
-  try {
-    signedTransaction = await window.freighterApi.signTransaction(xdr);
-  } catch (e) {
-    error = e;
-  }
-  if (error) {
-    return error;
-  }
-  return signedTransaction;
-};
-
-export const trustAsset = async () => {
-  const publicKey = await retrievePublicKey();
+export const openTrustAlbedo= async () => {
+ const publicKey = await albedo.publicKey()
+  .then(res => res.pubkey)
   server.loadAccount(publicKey).then(async (account) => {
     const optionalFee = await server.feeStats();
     const avgFee = optionalFee.fee_charged.mode;
@@ -58,7 +31,12 @@ export const trustAsset = async () => {
       .setTimeout(180)
       .build();
     let xdr = transaction.toXDR();
-    const userSignedTransaction = await userSignTransaction(xdr);
+    const userSignedTransaction =  albedo.tx({
+                                      xdr: xdr,
+                                      network: 'public'
+                                        })
+                                      .then(res => res.result)
+
     const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
       userSignedTransaction,
       StellarSdk.Networks.PUBLIC
@@ -77,4 +55,4 @@ export const trustAsset = async () => {
     }
   });
   openTrustsFromFreighter.disabled = false;
-};
+}
