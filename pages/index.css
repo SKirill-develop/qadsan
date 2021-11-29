@@ -39,6 +39,7 @@ button {
 .about {
   background-image: url(../image/back-about.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .about__logo {
   width: 340px;
@@ -290,7 +291,7 @@ button {
 }
 .charts__buttons__title {
   font-size: 23px;
-  line-height: 27px;
+  line-height: 37px;
   color: #29083D;
   margin: 0;
   text-align: center;
@@ -304,18 +305,18 @@ button {
   height: 50px;
 }
 .open-trust__albedo {
-  background: url("../../../../image/albedo-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-color: #fff;
   border-radius: 10px;
 }
+.open-trust__albedo_img {
+  width: 100px;
+}
 .open-trust__freighter {
-  background: url("../../../../image/freighter-logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-color: #fff;
   border-radius: 10px;
+}
+.open-trust__freighter_img {
+  width: 100px;
 }
 
 .open-trust:hover {
