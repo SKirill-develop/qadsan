@@ -18,23 +18,24 @@ const tradesList = (resp) => {
   operatElement.querySelector(".sell_amount").textContent =
     counterAmount.toFixed(5);
   operatElement.querySelector(".asset_buy_code").textContent =
-    resp.base_asset_code;
+  ' ' + resp.base_asset_code;
   operatElement.querySelector(".asset_sell_code").textContent =
-    resp.counter_asset_code;
+  ' ' + resp.counter_asset_code;
   operatElement.querySelector(".operations__price").textContent =
   (counterAmount/baseAmount).toFixed(5);
+  operatElement.querySelector('.operations__link').href =
+  ('https://stellar.expert/explorer/public/account/'+resp.counter_account);
+
   if(trades.classList.contains('not-active')){
     trades.classList.remove('not-active');
   }
-  trades.prepend(operatElement);
+  trades.append(operatElement);
 
   const blocks = document.querySelectorAll(".operations__list");
 
   if (blocks.length > 5) {
     trades.lastElementChild.remove();
   }
-
-
 };
 
 const tradesOnline = (AssetSell, AssetBuy) => {
