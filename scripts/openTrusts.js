@@ -29,6 +29,7 @@ const userSignTransaction = async (xdr) => {
   try {
     signedTransaction = await window.freighterApi.signTransaction(xdr);
   } catch (e) {
+    loader.classList.add('not-active');
     error = e;
   }
   if (error) {
@@ -75,9 +76,9 @@ export const trustAsset = async () => {
         hash: response.hash,
       });
     } catch (err) {
+      loader.classList.add('not-active');
       console.error(err);
     }
   });
-
   openTrustsFromFreighter.disabled = false;
 };

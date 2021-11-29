@@ -13,7 +13,7 @@ export const openTrustAlbedo = async () => {
   const publicKey = await albedo
     .publicKey()
     .then((res) => res.pubkey)
-    .catch((err) => console.error(err));
+    .catch((err) => {loader.classList.add('not-active');console.error(err)});
   server.loadAccount(publicKey).then(async (account) => {
     const optionalFee = await server.feeStats();
     const avgFee = optionalFee.fee_charged.mode;
@@ -57,6 +57,7 @@ export const openTrustAlbedo = async () => {
         hash: response.hash,
       });
     } catch (err) {
+      loader.classList.add('not-active');
       console.error(err);
     }
   });
