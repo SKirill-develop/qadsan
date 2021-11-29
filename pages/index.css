@@ -647,7 +647,6 @@ button {
 }
 .trades {
   display: flex;
-  max-height: calc(100vh - 300px);
   flex-direction: column;
   align-items: center;
   margin: 40px;
@@ -656,55 +655,62 @@ button {
   bottom: 0;
   overflow: hidden;
   width: 300px;
-  padding: 1.8em 1.3em 1.3em;
+  padding: 20px 40px;
   z-index: 4;
+  background: #fff;
+  box-shadow: 0px -1px 40px rgba(27, 43, 126, 0.25);
+  border-radius: 8px;
 }
 
 .operations__list {
-  background: #fff;
-  margin: 10px;
-  padding: 10px 50px 10px 20px;
-  display: flex;
-  position: relative;
-  border: solid 1px;
-  border-radius: 5px;
+  border-bottom: 1px solid #dbdbdb;
   font-size: 13px;
+  width: 100%;
   line-height: 1.1;
   word-break: break-all;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s ease-in-out;
   opacity: 1;
   font-weight: 400;
-  width: 200px;
   visibility: visible;
-  opacity: 1;
   transition: visibility 0.5s, opacity 0.5s linear;
 }
-
 .operations__text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 18px;
+  line-height: 29px;
 }
-
-.operations__list_img {
-  width: 24px;
-  height: 24px;
+.operations__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-
+.operations__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.operations__title_text {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #28CD6A;
+}
+.operations__img {
+  width: 25px;
+  margin-right: 15px;
+}
 .operations__content {
   margin: 0;
 }
-
-.from {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.wallet_link {
-  text-decoration: none;
+.operations__price {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 29px;
 }
 
 .popup__button__close {
@@ -714,11 +720,14 @@ button {
 .popup__close {
   width: 10px;
   position: absolute;
-  opacity: 0.2;
   right: 0.8em;
   top: 0.5em;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.not-active {
+  display: none;
 }
 
 .date {

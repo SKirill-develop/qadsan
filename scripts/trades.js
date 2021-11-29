@@ -1,4 +1,4 @@
-import { server, trades, XLM, QADSAN, AllAssetsForTrade } from "./constants.js";
+import { server, trades, XLM, QADSAN, AllAssetsForTrade, tradesContent } from "./constants.js";
 
 const tradesList = (resp) => {
   console.log("resp: ", resp);
@@ -13,38 +13,28 @@ const tradesList = (resp) => {
   const operatElement = document
     .querySelector("#trades-List")
     .content.cloneNode(true);
-  operatElement.querySelector(".wallet_buy").textContent =
-    resp.base_account.slice(0, 5) + "..." + resp.base_account.slice(-5);
-  operatElement.querySelector(".wallet_sell").textContent =
-    resp.counter_account.slice(0, 5) + "..." + resp.counter_account.slice(-5);
   operatElement.querySelector(".buy_amount").textContent =
     baseAmount.toFixed(5);
-  operatElement.querySelector(".wallet_link_buy").href =
-    "https://stellar.expert/explorer/public/account/" + resp.base_account;
-  operatElement.querySelector(".wallet_link_sell").href =
-    "https://stellar.expert/explorer/public/account/" + resp.counter_account;
   operatElement.querySelector(".sell_amount").textContent =
     counterAmount.toFixed(5);
-  operatElement.querySelector(".date").textContent = resp.ledger_close_time;
   operatElement.querySelector(".asset_buy_code").textContent =
     resp.base_asset_code;
   operatElement.querySelector(".asset_sell_code").textContent =
     resp.counter_asset_code;
-
+  operatElement.querySelector(".operations__price").textContent =
+  (counterAmount/baseAmount).toFixed(5);
+  if(trades.classList.contains('not-active')){
+    trades.classList.remove("not-active");
+  }
   trades.prepend(operatElement);
 
-  const deleteButton = document.querySelectorAll(".popup__close");
   const blocks = document.querySelectorAll(".operations__list");
 
   if (blocks.length > 5) {
     trades.lastElementChild.remove();
   }
 
-  deleteButton.forEach((item) => {
-    item.addEventListener("click", function () {
-      blocks.forEach((item) => item.remove());
-    });
-  });
+
 };
 
 const tradesOnline = (AssetSell, AssetBuy) => {

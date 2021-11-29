@@ -16,6 +16,8 @@ import {
   asivChart,
   trosorcimChart,
   lapyapChart,
+  deleteButton,
+  trades,
 } from "../scripts/constants.js";
 import { closePopup } from "../scripts/utils.js";
 
@@ -41,6 +43,10 @@ openTrustsFromAlbedo.addEventListener("click", function () {
   openTrustsFromAlbedo.disabled = true;
   openTrustAlbedo();
 });
+
+deleteButton.addEventListener("click", function () {
+  trades.classList.add("not-active");
+  });
 
 popup.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("active")) {
