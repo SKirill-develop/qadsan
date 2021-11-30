@@ -13,7 +13,11 @@ export const openTrustAlbedo = async () => {
   const publicKey = await albedo
     .publicKey()
     .then((res) => res.pubkey)
-    .catch((err) => {loader.classList.add('not-active');console.error(err)});
+    .catch((err) => {
+      loader.classList.add("not-active");
+      console.error(err);
+    });
+
   server.loadAccount(publicKey).then(async (account) => {
     const optionalFee = await server.feeStats();
     const avgFee = optionalFee.fee_charged.mode;
@@ -22,6 +26,7 @@ export const openTrustAlbedo = async () => {
       fee,
       networkPassphrase: StellarSdk.Networks.PUBLIC,
     });
+
     AllAssets.forEach((asset) => {
       builder.addOperation(
         StellarSdk.Operation.changeTrust({
@@ -29,18 +34,23 @@ export const openTrustAlbedo = async () => {
         })
       );
     });
-    let transaction = builder
+
+    const transaction = builder
       .addMemo(StellarSdk.Memo.text("QADSAN GAME HAS STARTED"))
       .setTimeout(180)
       .build();
-    let xdr = transaction.toXDR();
+
+    const xdr = transaction.toXDR();
     const userSignedTransaction = albedo
       .tx({
         xdr: xdr,
         network: "public",
       })
       .then((res) => res.result)
-      .catch((e) => console.error(e));
+      .catch((e) => {
+        loader.classList.add("not-active");
+        console.error(e)
+      });
 
     const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
       userSignedTransaction,
@@ -49,7 +59,7 @@ export const openTrustAlbedo = async () => {
     try {
       const response = await server.submitTransaction(transactionToSubmit);
       console.log(response);
-      loader.classList.add('not-active');
+      loader.classList.add("not-active");
       openpPopup({
         popup: popup,
         title: popupTite,
@@ -57,7 +67,7 @@ export const openTrustAlbedo = async () => {
         hash: response.hash,
       });
     } catch (err) {
-      loader.classList.add('not-active');
+      loader.classList.add("not-active");
       console.error(err);
     }
   });

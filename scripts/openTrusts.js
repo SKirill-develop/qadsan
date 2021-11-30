@@ -15,7 +15,7 @@ const retrievePublicKey = async () => {
   try {
     publicKey = await window.freighterApi.getPublicKey();
   } catch (e) {
-    loader.classList.add('not-active');
+    loader.classList.add("not-active");
     error = e;
   }
   if (error) {
@@ -30,7 +30,7 @@ const userSignTransaction = async (xdr) => {
   try {
     signedTransaction = await window.freighterApi.signTransaction(xdr);
   } catch (e) {
-    loader.classList.add('not-active');
+    loader.classList.add("not-active");
     error = e;
   }
   if (error) {
@@ -56,11 +56,11 @@ export const trustAsset = async () => {
         })
       );
     });
-    let transaction = builder
+    const transaction = builder
       .addMemo(StellarSdk.Memo.text("QADSAN GAME HAS STARTED"))
       .setTimeout(180)
       .build();
-    let xdr = transaction.toXDR();
+    const xdr = transaction.toXDR();
     const userSignedTransaction = await userSignTransaction(xdr);
     const transactionToSubmit = StellarSdk.TransactionBuilder.fromXDR(
       userSignedTransaction,
@@ -69,7 +69,7 @@ export const trustAsset = async () => {
     try {
       const response = await server.submitTransaction(transactionToSubmit);
       console.log(response);
-      loader.classList.add('not-active');
+      loader.classList.add("not-active");
       openpPopup({
         popup: popup,
         title: popupTite,
@@ -77,7 +77,7 @@ export const trustAsset = async () => {
         hash: response.hash,
       });
     } catch (err) {
-      loader.classList.add('not-active');
+      loader.classList.add("not-active");
       console.error(err);
     }
   });
