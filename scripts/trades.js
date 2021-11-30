@@ -1,4 +1,4 @@
-import { server, trades, XLM, QADSAN, AllAssetsForTrade } from "./constants.js";
+import { server, trades, XLM, QADSAN, AllAssetsForTrade, tradesContent } from "./constants.js";
 
 const tradesList = (resp) => {
   console.log("resp: ", resp);
@@ -14,27 +14,27 @@ const tradesList = (resp) => {
     .querySelector("#trades-List")
     .content.cloneNode(true);
   operatElement.querySelector(".buy_amount").textContent =
-    baseAmount.toFixed(5);
+    baseAmount.toFixed(2);
   operatElement.querySelector(".sell_amount").textContent =
-    counterAmount.toFixed(5);
+    counterAmount.toFixed();
   operatElement.querySelector(".asset_buy_code").textContent =
   ' ' + resp.base_asset_code;
   operatElement.querySelector(".asset_sell_code").textContent =
   ' ' + resp.counter_asset_code;
   operatElement.querySelector(".operations__price").textContent =
-  (counterAmount/baseAmount).toFixed(5);
+  (counterAmount/baseAmount).toFixed(3);
   operatElement.querySelector('.operations__link').href =
   ('https://stellar.expert/explorer/public/account/'+resp.counter_account);
 
   if(trades.classList.contains('not-active')){
     trades.classList.remove('not-active');
   }
-  trades.append(operatElement);
+  tradesContent.prepend(operatElement);
 
   const blocks = document.querySelectorAll(".operations__list");
 
   if (blocks.length > 5) {
-    trades.firstElementChild.remove();
+    tradesContent.lastElementChild.remove();
   }
 };
 
