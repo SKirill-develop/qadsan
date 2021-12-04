@@ -32,7 +32,7 @@ const tradesList = (resp) => {
 
   const blocks = document.querySelectorAll(".operations__list");
 
-  if (blocks.length > 5) {
+  if (blocks.length > 3) {
     tradesContent.lastElementChild.remove();
   }
 };
