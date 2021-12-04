@@ -4,7 +4,7 @@ export const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerView: 'auto',
   speed: 400,
-  spaceBetween: 40,
+  spaceBetween: 10,
   centeredSlides: true,
   breakpoints: {
     1024: {

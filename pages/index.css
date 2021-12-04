@@ -863,9 +863,10 @@ button {
   align-items: center;
   justify-content: center;
   background: #fff;
-  box-shadow: 0px 0px 36px rgba(34, 14, 88, 0.05);
-  border-radius: 3px;
   height: 157px;
+}
+.trade__img {
+  width: 150px;
 }
 
 @media screen and (max-width: 768px) {
