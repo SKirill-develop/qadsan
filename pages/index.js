@@ -24,9 +24,13 @@ import {
 } from "../scripts/constants.js";
 import { closePopup } from "../scripts/utils.js";
 
-price();
+const stellar = async () => {
+  await price();
+  await checkTrade();
+}
+stellar();
 
-checkTrade();
+
 
 const Alset = new Chart(alsetChart, config);
 const Ellpa = new Chart(ellpaChart, config);
