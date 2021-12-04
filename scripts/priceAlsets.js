@@ -38,7 +38,7 @@ const getPrice = (asset, content) => {
     .call()
     .then(resp => resp.records[0].close_r.d / resp.records[0].close_r.n)
     .then(price => {
-      content.querySelector(".assets__price_now_in_doll").textContent = '$' + (price/100).toFixed(5);
+      content.querySelector(".assets__price_now_in_doll").textContent = '$' + (price/100).toFixed(7);
       content.querySelector(".assets__price_now").textContent = price.toFixed(7) + ' QADSAN';
 
       getPriceYesterday(asset, content, price)
