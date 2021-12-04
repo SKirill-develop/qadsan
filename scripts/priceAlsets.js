@@ -34,7 +34,6 @@ const getPrice = (asset, content) => {
 
   server
     .tradeAggregation(base, counter, startTime, endTime, resolution, offset)
-    .order("desc")
     .limit(1)
     .call()
     .then(resp => resp.records[0].close_r.d / resp.records[0].close_r.n)
@@ -66,7 +65,16 @@ const getPriceYesterday = (asset, content, price) => {
       const procent = (price - priceYesterdey)/priceYesterdey * 100;
       return procent;
     })
-    .then(procent => content.querySelector(".assets__price_variance").textContent = procent.toFixed(2))
+    .then(procent => {
+    if (procent > 0){
+      content.querySelector(".assets__price_variance").textContent = '+' + procent.toFixed(2);
+    } else {
+      content.querySelector(".assets__price_variance").textContent = procent.toFixed(2);
+      content.querySelector(".assets__price_variance").style.color = 'red';
+    }
+
+
+    })
     .catch(function (err) {
       console.error(err);
     });
