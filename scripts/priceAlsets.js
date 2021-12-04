@@ -67,9 +67,9 @@ const getPriceYesterday = (asset, content, price) => {
     })
     .then(procent => {
     if (procent > 0){
-      content.querySelector(".assets__price_variance").textContent = '+' + procent.toFixed(2);
+      content.querySelector(".assets__price_variance").textContent = '+' + procent.toFixed(2) + '%';
     } else {
-      content.querySelector(".assets__price_variance").textContent = procent.toFixed(2);
+      content.querySelector(".assets__price_variance").textContent = procent.toFixed(2) + '%';
       content.querySelector(".assets__price_variance").style.color = 'red';
     }
 
