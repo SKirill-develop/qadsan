@@ -2,6 +2,8 @@ import { config } from "../scripts/charts.js";
 import { trustAsset } from "../scripts/openTrusts.js";
 import { openTrustAlbedo } from "../scripts/openTrustFromAlbedo.js";
 import { checkTrade } from "../scripts/trades.js";
+import { swiper } from "../scripts/swiper.js";
+import { price } from "../scripts/priceAlsets.js";
 import {
   popup,
   openTrustsFromFreighter,
@@ -21,6 +23,8 @@ import {
   loader,
 } from "../scripts/constants.js";
 import { closePopup } from "../scripts/utils.js";
+
+price();
 
 checkTrade();
 

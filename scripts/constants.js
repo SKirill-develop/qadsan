@@ -7,6 +7,18 @@ export const popup = document.querySelector('#popup');
 export const popupTite = popup.querySelector('.popup__title');
 export const popupResult= popup.querySelector('.popup__result');
 export const loader = document.querySelector('.loader');
+export const prices = document.querySelectorAll('.assets__price_now');
+
+export const ALSETContent = document.querySelector('#ALSET');
+export const ELLPAContent = document.querySelector('#ELLPA');
+export const ELGOOGContent = document.querySelector('#ELGOOG');
+export const EKINContent = document.querySelector('#EKIN');
+export const KOOBECAFContent = document.querySelector('#KOOBECAF');
+export const ISPEPContent = document.querySelector('#ISPEP');
+export const MARGALETContent = document.querySelector('#MARGALET');
+export const ASIVContent = document.querySelector('#ASIV');
+export const TFOSORCIMContent = document.querySelector('#TFOSORCIM');
+export const LAPYAPContent = document.querySelector('#LAPYAP');
 
 export const alsetChart = document.querySelector('#alset');
 export const ellpaChart = document.querySelector('#ellpa');
@@ -34,4 +46,6 @@ export const ALSET = new StellarSdk.Asset('ALSET', 'GA4LXEHVL7WZOFL7KRQEZ36ASVNJ
 export const MARGELET = new StellarSdk.Asset('MARGELET', 'GA5PB5WXXE4GTJWCDOPJPACFO7KC5IIIOO356XUCP37JPRDHJ2DL4AFI');
 export const NOZAMA = new StellarSdk.Asset('NOZAMA', 'GDVA6YXBBNA7ONRYIWQDVSZC366EU5HQIBKPY4PNM4QBVSDJCKYMF2EE');
 export const AllAssets = [QADSAN, MARGELET, NOZAMA, ELGOOG, ASIV, LAPYAP, EKIN, EKOOBECAF, TFOSORCIM, ELPPA, ISPEP, ALSET];
-export const AllAssetsForTrade = [MARGELET, NOZAMA, ELGOOG, ASIV, LAPYAP, EKIN, EKOOBECAF, TFOSORCIM, ELPPA, ISPEP, ALSET];
+export const AllAssetsForTrade = [ALSET, ELPPA, ELGOOG, EKIN, EKOOBECAF, ISPEP, MARGELET, ASIV, TFOSORCIM, LAPYAP];
+
+

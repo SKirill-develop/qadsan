@@ -1,7 +1,6 @@
 import { server, trades, XLM, QADSAN, AllAssetsForTrade, tradesContent } from "./constants.js";
 
 const tradesList = (resp) => {
-  console.log("resp: ", resp);
   if (resp.counter_asset_type === "native") {
     resp.counter_asset_code = "XLM";
   }

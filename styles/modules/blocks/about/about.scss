@@ -11,8 +11,8 @@
 
   &__conteiner {
     display: flex;
-    align-items: flex-end;
-    padding-bottom: 260px;
+    align-items: center;
+    padding-bottom: 26px;
   }
 
   &__info{
@@ -20,7 +20,6 @@
     flex-direction: column;
     color: #FFFFFF;
     max-width: 670px;
-    margin-top: 174px;
   }
 
   &__title {
@@ -36,8 +35,23 @@
     line-height: 47px;
     margin: 25px 0 0;
   }
+
+  &__image {
+    margin:0 0 47px 133px;
+    &__mobile {
+      display: none;
+    }
+  }
 }
 
+@media screen and (max-width: 1400px) {
+  .about{
+    &__image {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .about{
@@ -57,6 +71,14 @@
       margin-top: 74px;
       margin-bottom: 50px;
     }
+    &__image {
+      display: none;
+      &__mobile {
+        display: flex;
+        width: 100%;
+      }
+    }
+
   }
 }
 
@@ -69,6 +91,14 @@
     &__caption {
       font-size: 15px;
       line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    &__logo {
+      width: 100%;
     }
   }
 }
