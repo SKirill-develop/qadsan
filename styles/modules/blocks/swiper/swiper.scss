@@ -2,3 +2,50 @@
   width: 100%;
   height: auto;
 }
+
+.swiper__trade{
+  position: relative;
+}
+.swiper-button-next-unique {
+  cursor: pointer;
+  top: 65%;
+  left: -10%;
+  width: 46px;
+  height: 40px;
+  position: absolute;
+  background-image: url(../image/ArrowLeft.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+
+.swiper-button-prev-unique {
+  cursor: pointer;
+  top: 65%;
+  right: -10%;
+  width: 46px;
+  height: 40px;
+  position: absolute;
+  background-image: url(../image/ArrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-button-next-unique {
+    left: 0;
+  }
+  .swiper-button-prev-unique {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next-unique {
+    top: 50%;
+  }
+  .swiper-button-prev-unique {
+    top: 50%;
+  }
+}
