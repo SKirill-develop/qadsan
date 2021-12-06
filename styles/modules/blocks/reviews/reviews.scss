@@ -109,7 +109,7 @@
       top: 120%;
     }
     &__woman {
-     width: 35%;
+      width: 35%;
     }
   }
 }
@@ -159,7 +159,6 @@
 
 @media screen and (max-width: 425px) {
   .reviews {
-
     &__text {
       margin-left: 0;
     }
@@ -173,7 +172,6 @@
     }
 
     &__marks {
-
       &_type_up {
         left: 0;
       }
@@ -182,7 +180,6 @@
         bottom: 0;
         right: 0;
       }
-
     }
   }
 }

@@ -964,7 +964,7 @@ button {
 .swiper-button-next-unique {
   cursor: pointer;
   top: 65%;
-  left: -10%;
+  left: -5%;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -977,7 +977,7 @@ button {
 .swiper-button-prev-unique {
   cursor: pointer;
   top: 65%;
-  right: -10%;
+  right: -5%;
   width: 46px;
   height: 40px;
   position: absolute;

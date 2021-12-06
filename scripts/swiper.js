@@ -37,5 +37,12 @@ export const swiper__reviews = new Swiper('.swiper__reviews', {
     prevEl: '.swiper-button-next_reviews',
     nextEl: '.swiper-button-prev_reviews',
   },
-
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    //bulletClass: ".swiper-pagination-bullets"
+  },
 });

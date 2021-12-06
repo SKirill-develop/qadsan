@@ -20,7 +20,7 @@
 .swiper-button-next-unique {
   cursor: pointer;
   top: 65%;
-  left: -10%;
+  left: -5%;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -33,7 +33,7 @@
 .swiper-button-prev-unique {
   cursor: pointer;
   top: 65%;
-  right: -10%;
+  right: -5%;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -68,6 +68,7 @@
   background-position: center;
   z-index: 10;
 }
+
 @media screen and (max-width: 1024px) {
   .swiper-button-next-unique {
     left: 0;
