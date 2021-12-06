@@ -468,6 +468,7 @@ button {
 .reviews__contein {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .reviews__title {
   font-weight: bold;
@@ -478,7 +479,6 @@ button {
 }
 .reviews__woman {
   z-index: -1;
-  width: 40%;
 }
 .reviews__info {
   position: relative;
@@ -510,7 +510,6 @@ button {
 .reviews__wave {
   position: absolute;
   top: 55%;
-  z-index: -1;
   width: 100%;
 }
 .reviews__also_wave {
@@ -570,6 +569,9 @@ button {
   }
   .reviews__also_wave {
     top: 120%;
+  }
+  .reviews__woman {
+    width: 35%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1018,6 +1020,16 @@ button {
 
   .swiper-button-prev-unique {
     right: 0;
+  }
+
+  .swiper-button-next_reviews {
+    top: 0;
+    left: 5%;
+  }
+
+  .swiper-button-prev_reviews {
+    top: 0;
+    right: 5%;
   }
 }
 @media screen and (max-width: 768px) {
