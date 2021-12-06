@@ -1,9 +1,9 @@
 import { config } from "../scripts/charts.js";
-import { trustAsset } from "../scripts/openTrusts.js";
+import { trustAsset } from "../scripts/openTrustsFromFreighter.js";
 import { openTrustAlbedo } from "../scripts/openTrustFromAlbedo.js";
 import { checkTrade } from "../scripts/trades.js";
-import { swiper } from "../scripts/swiper.js";
-import { price } from "../scripts/priceAlsets.js";
+import { swiper, swiper__reviews } from "../scripts/swiper.js";
+import { price } from "../scripts/priceAssets.js";
 import {
   popup,
   openTrustsFromFreighter,

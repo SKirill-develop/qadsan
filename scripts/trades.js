@@ -21,7 +21,7 @@ const tradesList = (resp) => {
   operatElement.querySelector(".asset_sell_code").textContent =
   ' ' + resp.counter_asset_code;
   operatElement.querySelector(".operations__price").textContent =
-  (counterAmount/baseAmount).toFixed(3);
+  (counterAmount/baseAmount).toFixed(6);
   operatElement.querySelector('.operations__link').href =
   ('https://stellar.expert/explorer/public/account/'+resp.counter_account);
 
@@ -49,9 +49,11 @@ const tradesOnline = (AssetSell, AssetBuy) => {
     .stream({ onmessage: tradesHandler });
 };
 
-export const checkTrade = () => {
-  tradesOnline(XLM, QADSAN);
+export const checkTrade = async () => {
+  await tradesOnline(XLM, QADSAN);
   AllAssetsForTrade.forEach((asset) => {
-    tradesOnline(asset, QADSAN);
+    setTimeout(() =>
+    tradesOnline(asset, QADSAN)
+    , 2000)
   });
 };

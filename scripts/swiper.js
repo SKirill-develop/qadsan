@@ -28,3 +28,14 @@ export const swiper = new Swiper('.swiper', {
   },
 
 });
+
+export const swiper__reviews = new Swiper('.swiper__reviews', {
+  loop: true,
+  speed: 400,
+  slidesPerView: 1,
+  navigation: {
+    prevEl: '.swiper-button-next_reviews',
+    nextEl: '.swiper-button-prev_reviews',
+  },
+
+});

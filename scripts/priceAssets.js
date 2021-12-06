@@ -36,7 +36,13 @@ const getPrice = async (asset, content) => {
     .tradeAggregation(base, counter, startTime, endTime, resolution, offset)
     .limit(1)
     .call()
-    .then((resp) => resp.records[0].open_r.d / resp.records[0].open_r.n)
+    .then((resp) => {
+     if(resp.records.length > 0) {
+      return resp.records[0].open_r.d / resp.records[0].open_r.n;
+     }else{
+       return 0
+     }
+    })
     .then((price) => {
       content.querySelector(".assets__price_now_in_doll").textContent =
         "$" + (price / 100).toFixed(7);
