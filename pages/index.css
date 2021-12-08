@@ -49,7 +49,6 @@ button {
 .about__conteiner {
   display: flex;
   align-items: center;
-  padding-bottom: 26px;
 }
 .about__info {
   display: flex;
@@ -968,7 +967,6 @@ button {
 .swiper-button-next-unique {
   cursor: pointer;
   top: 65%;
-  left: 0;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -981,7 +979,7 @@ button {
 .swiper-button-prev-unique {
   cursor: pointer;
   top: 65%;
-  right: 0;
+  right: 130px;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -994,7 +992,6 @@ button {
 .swiper-button-next_reviews {
   cursor: pointer;
   top: 50%;
-  left: 0;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -1007,7 +1004,7 @@ button {
 .swiper-button-prev_reviews {
   cursor: pointer;
   top: 50%;
-  right: 0;
+  right: 130px;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -1018,11 +1015,26 @@ button {
 }
 
 .swiper-pagination-bullets-dynamic {
-  left: 0 !important;
-  transform: translateX(50%) !important;
   bottom: -10px !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .swiper-button-next-unique {
+    left: 0;
+  }
+
+  .swiper-button-prev-unique {
+    right: 0;
+  }
+
+  .swiper-button-next_reviews {
+    top: 0;
+  }
+
+  .swiper-button-prev_reviews {
+    top: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .swiper-button-next-unique {
     left: 0;
@@ -1035,10 +1047,12 @@ button {
   }
 
   .swiper-button-next_reviews {
+    left: 0;
     top: 0;
   }
 
   .swiper-button-prev_reviews {
+    right: 0;
     top: 0;
   }
 }/*# sourceMappingURL=index.css.map */
