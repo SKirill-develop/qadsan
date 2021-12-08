@@ -43,6 +43,6 @@ export const swiper__reviews = new Swiper('.swiper__reviews', {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
-    //bulletClass: ".swiper-pagination-bullets"
+   // bulletElement: ".swiper-pagination-bulletses"
   },
 });

@@ -479,6 +479,7 @@ button {
 }
 .reviews__woman {
   z-index: -1;
+  height: 500px;
 }
 .reviews__info {
   position: relative;
@@ -570,6 +571,7 @@ button {
     top: 120%;
   }
   .reviews__woman {
+    height: 100%;
     width: 35%;
   }
 }
@@ -919,6 +921,9 @@ button {
   display: none;
 }
 
+.trade {
+  position: relative;
+}
 .trade__title {
   font-weight: bold;
   font-size: 58px;
@@ -963,7 +968,7 @@ button {
 .swiper-button-next-unique {
   cursor: pointer;
   top: 65%;
-  left: -5%;
+  left: 0;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -976,7 +981,7 @@ button {
 .swiper-button-prev-unique {
   cursor: pointer;
   top: 65%;
-  right: -5%;
+  right: 0;
   width: 46px;
   height: 40px;
   position: absolute;
@@ -988,7 +993,7 @@ button {
 
 .swiper-button-next_reviews {
   cursor: pointer;
-  top: 65%;
+  top: 50%;
   left: 0;
   width: 46px;
   height: 40px;
@@ -1001,7 +1006,7 @@ button {
 
 .swiper-button-prev_reviews {
   cursor: pointer;
-  top: 65%;
+  top: 50%;
   right: 0;
   width: 46px;
   height: 40px;
@@ -1012,31 +1017,28 @@ button {
   z-index: 10;
 }
 
-@media screen and (max-width: 1024px) {
+.swiper-pagination-bullets-dynamic {
+  left: 0 !important;
+  transform: translateX(50%) !important;
+  bottom: -10px !important;
+}
+
+@media screen and (max-width: 768px) {
   .swiper-button-next-unique {
     left: 0;
+    top: 50%;
   }
 
   .swiper-button-prev-unique {
     right: 0;
+    top: 50%;
   }
 
   .swiper-button-next_reviews {
     top: 0;
-    left: 5%;
   }
 
   .swiper-button-prev_reviews {
     top: 0;
-    right: 5%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .swiper-button-next-unique {
-    top: 50%;
-  }
-
-  .swiper-button-prev-unique {
-    top: 50%;
   }
 }/*# sourceMappingURL=index.css.map */
